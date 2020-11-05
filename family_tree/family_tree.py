@@ -1,3 +1,9 @@
+##############################################
+# Here is where the family tree gets created
+# Version: V1.0
+# Date: 05-11-2020
+##############################################
+
 from family_tree.member import Member, Gender
 from family_tree import constants
 
@@ -8,6 +14,11 @@ class FamilyTree:
         self.family_tree = {}
 
     def add_child(self, name, gender, mother_name=None):
+        """
+        -> Add children to the list of sons, if gender is Male
+        -> Add children to the list of daughters, if gender is Female
+        -> Raise Error Otherwise
+        """
         _id = len(self.family_tree.keys()) + 1
         member = Member(_id, name, gender)
         if not self.family_tree:
@@ -38,6 +49,9 @@ class FamilyTree:
             return constants.CHILD_ADDITION_FAILED
 
     def add_spouse(self, name, gender, spouse_name):
+        """
+           -> Set spouse names for both entities
+        """
         _id = len(self.family_tree.keys()) + 1
         member = Member(_id, name, gender)
         if not self.family_tree:
@@ -63,6 +77,9 @@ class FamilyTree:
             return constants.SPOUSE_ADDITION_FAILED
 
     def get_relationship(self, name, relationship_type):
+        """
+          -> Get the relationship with name and type.
+        """
         member = self.family_tree.get(name, None)
         if not member:
             return constants.PERSON_NOT_FOUND

@@ -1,3 +1,7 @@
+#####################################################
+#  This is the ﬁle that will contain your main method
+####################################################
+
 import sys
 from family_tree.family_tree import FamilyTree
 
