@@ -102,6 +102,7 @@ class Geektrust:
 
 
 if __name__ == "__main__":
+
     geektrust = Geektrust()
     filename = sys.argv[1]
     geektrust.main(filename)
