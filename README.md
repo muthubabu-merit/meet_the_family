@@ -10,10 +10,10 @@ GEEKTRUST MEET THE FAMILY
 
 # INSTRUCTIONS TO TEST:
 Unit Test
-- python -m unittest discover -s "./tests/unit/" -p "test_*.py" && flake8
+- python -m unittest discover -s "./tests/unit/" -p "test_*.py"
 
 Integration Test
-- python -m unittest discover -s "./tests/integration/" -p "test_*.py" && flake8
+- python -m unittest discover -s "./tests/integration/" -p "test_*.py"
 
 System Test
-- python -m unittest discover -s "./tests/system/" -p "test_*.py" && flake8
+- python -m unittest discover -s "./tests/system/" -p "test_*.py"
